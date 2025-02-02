@@ -1,0 +1,121 @@
+.accordion {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  user-select: none;
+  cursor: pointer;
+  padding: 2.4rem 0;
+
+  @include breakpoint(mobile) {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-row-gap: 0;
+    grid-template-areas: "title icon" "content content";
+    padding: 1.6rem 0;
+  }
+}
+
+.accordion__left-col {
+  padding-top: 0.3rem;
+  display: block;
+  width: 50%;
+  flex-grow: 1;
+
+  @include breakpoint(mobile) {
+    padding-top: 0;
+    display: contents;
+  }
+}
+
+.accordion__title {
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  font-family: var(--tektur);
+
+  @include breakpoint(mobile) {
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 135%;
+    margin: 0;
+    grid-area: title;
+    align-self: center;
+  }
+}
+
+.accordion__dropdown {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 500ms;
+
+  @include breakpoint(mobile) {
+    grid-area: content;
+  }
+
+  .accordion.active & {
+    grid-template-rows: 1fr;
+  }
+}
+
+.accordion__dropdown-inner {
+  grid-row: 1 / 2;
+  overflow: hidden;
+}
+
+.accordion__dropdown-content {
+  padding-top: 1.2rem;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.4;
+  max-width: 84rem;
+  color: var(--text-color-2);
+  @include breakpoint(mobile) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    padding-top: 0.8rem;
+  }
+}
+
+.accordion__icon {
+  flex-shrink: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+
+  position: relative;
+
+  @include breakpoint(mobile) {
+    width: 3.2rem;
+    height: 3.2rem;
+    grid-area: icon;
+    align-self: center;
+    align-self: flex-start;
+  }
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 2.5rem;
+    height: 1px;
+    background-color: rgba(27, 70, 119, 1);
+    transition: transform 0.4s;
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+
+  .accordion.active & {
+    &::after {
+      transform: translate(-50%, -50%) rotate(90deg) scaleX(0);
+    }
+  }
+}

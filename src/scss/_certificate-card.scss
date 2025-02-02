@@ -1,0 +1,74 @@
+.certificate-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "stack";
+  flex-grow: 1;
+  transition: color 0.2s, background-color 0.2s;
+  &::before {
+    content: "";
+    display: block;
+    padding-bottom: 61.3%;
+    grid-area: stack;
+
+    @include breakpoint(mobile) {
+      padding-bottom: 65%;
+    }
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: #f0f2f5;
+    }
+  }
+}
+
+.certificate-card__content {
+  grid-area: stack;
+  z-index: 5;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: 1fr auto;
+  align-items: center;
+  grid-template-areas: "title title" "format arrow";
+  grid-gap: 1.6rem;
+  padding: 4rem;
+  border: 1px solid #c2c2c2;
+
+  @include breakpoint(mobile) {
+    padding: 2.4rem;
+  }
+
+  svg {
+    grid-area: arrow;
+    width: 1.6rem;
+    height: 1.6rem;
+    justify-self: flex-end;
+    transition: transform 0.2s;
+  }
+}
+
+.certificate-card__title {
+  grid-area: title;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  align-self: flex-start;
+}
+
+.certificate-card__format {
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  color: #c2c2c2;
+  grid-area: format;
+  justify-self: flex-start;
+
+  @include breakpoint(mobile) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  }
+}

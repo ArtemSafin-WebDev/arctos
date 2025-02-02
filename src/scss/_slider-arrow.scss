@@ -1,0 +1,33 @@
+.slider-arrow {
+  width: 8.4rem;
+  height: 4.8rem;
+  flex-shrink: 0;
+  background-color: #fff;
+  border: 1px solid #c2c2c2;
+  display: inline-grid;
+  place-items: center;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s, opacity 0.2s;
+  cursor: pointer;
+  svg {
+    width: 1.6rem;
+    height: 1.6rem;
+    fill: var(--primary-color);
+    transition: fill 0.2s;
+  }
+
+  &.swiper-button-disabled {
+    cursor: default;
+    pointer-events: none;
+    svg {
+      fill: #c2c2c2;
+    }
+  }
+
+  &:not(.swiper-button-disabled) {
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+}

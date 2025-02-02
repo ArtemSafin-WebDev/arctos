@@ -1,0 +1,31 @@
+.btn {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+  font-family: var(--tektur);
+  padding: 1.7rem 5.2rem;
+  border: 1px solid var(--primary-color);
+  color: #fefefe;
+  background-color: var(--primary-color);
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+  justify-content: center;
+  text-align: center;
+  &:link,
+  &:visited {
+    color: #fefefe;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      color: var(--primary-color);
+      background-color: #fefefe;
+    }
+  }
+
+  &:active {
+    color: var(--primary-color);
+    background-color: #fefefe;
+  }
+}

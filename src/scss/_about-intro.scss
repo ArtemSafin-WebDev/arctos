@@ -1,0 +1,49 @@
+.about-intro {
+  @include blockWrapper;
+  padding-bottom: 7.2rem;
+  padding-top: 4rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  background-image: url("../images/about-intro-bg.svg");
+  background-repeat: no-repeat;
+  background-size: 110rem auto;
+  background-position: bottom -80rem right -10rem;
+
+  @include breakpoint(mobile) {
+    padding-bottom: 4rem;
+    padding-top: 1.2rem;
+    background-image: none;
+  }
+}
+.about-intro__content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+
+  gap: 2.4rem;
+
+  @include breakpoint(mobile) {
+    gap: 1.6rem;
+  }
+}
+
+.about-intro__text {
+  max-width: 84rem;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  @include breakpoint(mobile) {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    max-width: none;
+  }
+  p {
+    margin-bottom: 1rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

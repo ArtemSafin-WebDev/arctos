@@ -1,0 +1,160 @@
+.service-intro {
+  @include blockWrapper;
+  background-color: var(--primary-color);
+  color: white;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 12rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 7.2rem;
+  }
+}
+
+.service-intro__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.service-intro__bg-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-intro__content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+  padding-top: 4rem;
+  padding-bottom: 5.5rem;
+
+  @include breakpoint(mobile) {
+    padding-top: 3.2rem;
+    padding-bottom: 6.7rem;
+  }
+}
+
+.service-intro__breadcrumbs {
+  margin-bottom: 7rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 5.6rem;
+  }
+}
+
+.service-intro__heading {
+  @include breakpoint(mobile) {
+    margin-bottom: 1.6rem;
+  }
+}
+
+.service-intro__row {
+  display: grid;
+  grid-gap: 0.8rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-areas: "left right";
+  align-items: flex-start;
+
+  @include breakpoint(mobile) {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+.service-intro__left-col {
+  grid-area: left;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: flex-start;
+
+  @include breakpoint(mobile) {
+    display: contents;
+  }
+}
+
+.service-intro__right-col {
+  grid-area: right;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  @include breakpoint(mobile) {
+    display: contents;
+  }
+}
+
+.service-intro__text {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  max-width: 60rem;
+  @include breakpoint(mobile) {
+    max-width: none;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    margin-bottom: 2rem;
+  }
+}
+
+.service-intro__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  @include breakpoint(mobile) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.service-intro__list-item {
+  border-bottom: 1px solid rgba(#c2c2c2, 0.2);
+}
+
+.service-intro__link {
+  padding: 1.6rem 0;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-family: var(--tektur);
+  display: block;
+
+  @include breakpoint(mobile) {
+    padding: 1.2rem 0;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  svg {
+    flex-shrink: 0;
+    width: 0.7rem;
+    height: 1.3rem;
+    display: inline-block;
+    vertical-align: middle;
+    fill: currentColor;
+    margin-left: 0.2em;
+    margin-bottom: 0.05em;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      color: rgba(white, 0.7);
+    }
+  }
+}
+
+.service-intro__btn {
+  @include breakpoint(mobile) {
+    display: none;
+  }
+}

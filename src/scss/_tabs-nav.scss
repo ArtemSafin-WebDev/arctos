@@ -1,0 +1,39 @@
+.tabs-nav {
+  display: block;
+
+  @include breakpoint(mobile) {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-y: hidden;
+    margin: 0 calc(-1 * var(--content-padding));
+    padding: 0 var(--content-padding);
+    @include noScrollbar;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: var(--content-padding);
+  }
+}
+
+.tabs-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  row-gap: 2.5rem;
+  align-items: flex-start;
+
+  @include breakpoint(mobile) {
+    flex-wrap: nowrap;
+    align-items: stretch;
+    width: max-content;
+    gap: 1.6rem;
+  }
+}
+
+.tabs-nav__list-item {
+  flex-shrink: 0;
+
+  @include breakpoint(mobile) {
+    white-space: nowrap;
+    scroll-snap-align: start;
+    flex-grow: 1;
+  }
+}

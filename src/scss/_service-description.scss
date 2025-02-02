@@ -1,0 +1,23 @@
+.service-description {
+  @include blockWrapper;
+  margin-bottom: 12rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 7.2rem;
+  }
+}
+
+.service-description__content {
+  @include blockContent;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-gap: 0.8rem;
+
+  @include breakpoint(mobile) {
+    display: block;
+  }
+}
+
+.service-description__text {
+  grid-column: 1 / 10;
+}

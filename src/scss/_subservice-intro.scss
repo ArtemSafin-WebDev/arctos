@@ -1,0 +1,156 @@
+.subservice-intro {
+  @include blockWrapper;
+  position: relative;
+  z-index: 1;
+  background-color: #f4f4f4;
+  margin-bottom: 12rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 7.2rem;
+  }
+}
+
+.subservice-intro__content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+  padding-top: 4rem;
+  padding-bottom: 9rem;
+
+  @include breakpoint(mobile) {
+    padding-top: 3.2rem;
+    padding-bottom: 5.6rem;
+  }
+}
+
+.subservice-intro__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  @include breakpoint(mobile) {
+    display: none;
+  }
+}
+
+.subservice-intro__bg-image-wrapper {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: auto;
+  clip-path: polygon(0 100%, calc(100% - 20rem) 0, 100% 0, 100% 100%);
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: #2e81df;
+    opacity: 0.4;
+    mix-blend-mode: screen;
+  }
+}
+
+.subservice-intro__bg-image {
+  display: block;
+  width: auto;
+  height: 100%;
+}
+
+.subservice-intro__breadcrumbs {
+  margin-bottom: 5.6rem;
+}
+
+.subservice-intro__wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-gap: 0.8rem;
+
+  @include breakpoint(mobile) {
+    display: block;
+  }
+}
+
+.subservice-intro__text-content {
+  grid-column: 1 / 7;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.subservice-intro__text {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  color: var(--text-color-2);
+
+  @include breakpoint(mobile) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  }
+}
+
+.subservice-intro__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  @include breakpoint(mobile) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.subservice-intro__list-item {
+  border-bottom: 1px solid rgba(#c2c2c2, 0.4);
+}
+
+.subservice-intro__link {
+  display: block;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-family: var(--tektur);
+  color: #626262;
+  padding: 2rem 0;
+
+  @include breakpoint(mobile) {
+    padding: 1.2rem 0;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  &:link,
+  &:visited {
+    color: #626262;
+  }
+
+  svg {
+    display: inline-block;
+    vertical-align: middle;
+    width: 0.7rem;
+    height: 1.3rem;
+    fill: var(--primary-color);
+    margin-left: 0.2em;
+    margin-bottom: 0.1rem;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+}
+
+.subservice-intro__btn {
+  margin-top: 3.2rem;
+  align-self: flex-start;
+
+  @include breakpoint(mobile) {
+    display: none;
+  }
+}

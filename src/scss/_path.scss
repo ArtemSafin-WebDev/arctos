@@ -1,0 +1,184 @@
+.path {
+  @include blockWrapper;
+  margin-bottom: 12rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 7.2rem;
+  }
+
+  &--with-bg {
+    padding-top: 15rem;
+    padding-bottom: 10rem;
+    background-color: #f0f2f5;
+    background-repeat: no-repeat;
+    background-image: url("../images/path-bg.svg");
+    background-position: right bottom;
+    background-size: 142.2rem auto;
+
+    @include breakpoint(mobile) {
+      padding-top: 4rem;
+      padding-bottom: 15.4rem;
+      background-image: url("../images/path-bg-mobile.svg");
+      background-size: 100% auto;
+    }
+  }
+}
+
+.path__content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+}
+
+.path__heading {
+  margin-bottom: 5rem;
+  @include breakpoint(mobile) {
+    margin-bottom: 3.2rem;
+  }
+}
+
+.path__slider-wrapper {
+  .swiper {
+    overflow: visible;
+  }
+
+  .swiper-wrapper {
+    @include breakpoint(mobile) {
+      display: flex;
+      flex-direction: column;
+      gap: 2.4rem;
+    }
+  }
+
+  .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    box-sizing: border-box;
+
+    @include breakpointMF(small-tablet) {
+      width: 37rem;
+
+      &:last-child {
+        width: 28.2rem;
+
+        .path__slider-card-top {
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.path__slider-card {
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint(mobile) {
+    display: grid;
+    grid-gap: 1.6rem;
+    grid-template-columns: 4rem 1fr;
+    grid-template-areas: "number title" "number text";
+    align-items: flex-start;
+    grid-row-gap: 0.8rem;
+  }
+}
+
+.path__slider-card-top {
+  @include breakpointMF(small-tablet) {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3.2rem;
+
+    &::after {
+      content: "";
+      height: 1px;
+      width: 1px;
+      flex-grow: 1;
+      background-color: var(--primary-color);
+    }
+  }
+
+  @include breakpoint(mobile) {
+    display: contents;
+  }
+}
+
+.path__slider-card-number {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  background: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  font-family: var(--tektur);
+  width: 6.4rem;
+  height: 6.4rem;
+  @include breakpoint(mobile) {
+    grid-area: number;
+    width: 4rem;
+    height: 4rem;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+}
+
+.path__slider-card-title {
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  margin-bottom: 1.2rem;
+  @include breakpoint(mobile) {
+    margin: 0;
+    grid-area: title;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 135%;
+  }
+}
+
+.path__slider-card-text {
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  color: var(--text-color-2);
+  max-width: 28.2rem;
+  @include breakpoint(mobile) {
+    max-width: none;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    grid-area: text;
+  }
+}
+
+.path__slider-controls {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-gap: 0.8rem;
+  align-items: center;
+
+  @include breakpoint(mobile) {
+    display: none;
+  }
+}
+
+.path__slider-arrows {
+  grid-column: 1 / 6;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  justify-self: flex-start;
+}

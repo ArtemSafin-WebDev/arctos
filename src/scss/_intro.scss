@@ -1,0 +1,119 @@
+.intro {
+  background-color: var(--bg-color);
+
+  @include breakpoint(mobile) {
+    background-color: #fff;
+  }
+}
+
+.intro__top {
+  @include blockWrapper;
+  background-image: url("../images/about-intro-bg.svg");
+  background-repeat: no-repeat;
+  background-size: 120rem auto;
+  background-position: bottom -90rem right 0rem;
+
+  @include breakpoint(mobile) {
+    background-image: none;
+  }
+}
+
+.intro__top-content {
+  @include blockContent;
+  padding-top: 6.5rem;
+  padding-bottom: 5.8rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 0.8rem;
+  align-items: flex-end;
+
+  @include breakpoint(mobile) {
+    padding-top: 5.71rem;
+    padding-bottom: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    align-items: stretch;
+  }
+}
+
+.intro__list {
+  @include breakpoint(mobile) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: 0.4rem;
+    grid-auto-rows: 1fr;
+  }
+}
+
+.intro__list-item {
+  @include breakpointMF(small-tablet) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 1fr;
+    &:nth-child(even) {
+      .intro__card {
+        grid-column: 2 / 3;
+      }
+    }
+  }
+}
+
+.intro__card {
+  position: relative;
+  z-index: 1;
+  background-color: #fff;
+  padding: 4rem;
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 13.6rem;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  --corner-width: 2px;
+
+  @include breakpoint(mobile) {
+    min-height: 8rem;
+    padding: 2.4rem;
+    --corner-height: 3.2rem;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  }
+}
+
+.intro__card-corners {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.intro__image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1920 / 459;
+
+  @include breakpoint(mobile) {
+    aspect-ratio: 375 / 235;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(#1b4677, 0.4);
+    z-index: 2;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(#1b4677, 0.4);
+    z-index: 4;
+  }
+}

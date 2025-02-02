@@ -1,0 +1,64 @@
+.team {
+  @include blockWrapper;
+  padding-top: 4rem;
+  margin-bottom: 12rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 7.2rem;
+    padding-top: 1.2rem;
+  }
+}
+
+.team__content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+}
+
+.team__heading {
+  margin-bottom: 4rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 1.7rem;
+  }
+}
+
+.team__nav {
+  margin-bottom: 6.4rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 3.2rem;
+
+    .tabs-nav__list {
+      gap: 0.8rem;
+    }
+
+    .tab-btn {
+      padding-left: 0.8rem;
+      padding-right: 0.8rem;
+    }
+  }
+}
+
+.team__tab-heading {
+  margin-bottom: 4rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 2.4rem;
+  }
+}
+
+.team__list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-gap: 2.4rem;
+
+  @include breakpoint(mobile) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.team__list-item {
+  display: flex;
+  flex-direction: column;
+}

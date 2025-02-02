@@ -1,0 +1,145 @@
+.geography {
+  @include blockWrapper;
+  margin-bottom: 12rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 7.2rem;
+  }
+}
+
+.geography__content {
+  @include blockContent;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 0.8rem;
+  grid-template-areas: "left right";
+
+  @include breakpoint(mobile) {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "left" "right";
+    grid-gap: 0;
+  }
+}
+
+.geography__left-col {
+  grid-area: left;
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint(mobile) {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.geography__right-col {
+  grid-area: right;
+}
+
+.geography__map-wrapper {
+  width: max-content;
+  margin-top: -12rem;
+
+  @include breakpoint(mobile) {
+    margin-top: -16rem;
+  }
+}
+
+.geography__map {
+  height: 104.1rem;
+  max-width: none;
+  width: auto;
+  pointer-events: none;
+  @include breakpoint(mobile) {
+    height: 66.4rem;
+  }
+}
+
+.geography__heading {
+  margin-bottom: 3rem;
+}
+
+.geography__count {
+  font-size: 10rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+  font-family: var(--tektur);
+  justify-self: flex-end;
+  color: var(--primary-color);
+  margin-bottom: 3rem;
+  @include breakpoint(mobile) {
+    font-size: 8rem;
+    font-style: normal;
+    font-weight: 600;
+  }
+  sup,
+  span {
+    font-size: 3.2857rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 0.2em;
+    margin-left: -0.3em;
+
+    @include breakpoint(mobile) {
+      font-size: 3.2857rem;
+      font-style: normal;
+      font-weight: 600;
+    }
+  }
+}
+
+.geography__list {
+  @include breakpointMF(small-tablet) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 0.8rem;
+    grid-row-gap: 2.4rem;
+  }
+
+  @include breakpoint(mobile) {
+    column-count: 2;
+    column-gap: 1.8rem;
+  }
+}
+
+.geography__list-item {
+  @include breakpoint(mobile) {
+    break-inside: avoid;
+    margin-bottom: 1.2rem;
+  }
+}
+
+.geography__card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  @include breakpoint(mobile) {
+    gap: 0.2rem;
+  }
+}
+
+.geography__card-city {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  font-family: var(--tektur);
+
+  @include breakpoint(mobile) {
+    br {
+      display: none;
+    }
+  }
+}
+.geography__card-text {
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  color: var(--text-color-2);
+}
