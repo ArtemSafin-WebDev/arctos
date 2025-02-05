@@ -8,8 +8,10 @@
   --tektur: "Tektur", serif;
   --content-padding: 4rem;
   --container-width: 150rem;
+  --header-height: 12.8rem;
 
   @include breakpoint(mobile) {
     --content-padding: 2.4rem;
+    --header-height: 8.7rem;
   }
 }

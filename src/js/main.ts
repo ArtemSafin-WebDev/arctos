@@ -9,8 +9,10 @@ import fancybox from "./fancybox";
 import pathSlider from "./pathSlider";
 import tabs from "./tabs";
 import reviews from "./reviews";
+import header from "./header";
 
 document.addEventListener("DOMContentLoaded", () => {
+  header();
   tabs();
   accordions();
   ourClients();

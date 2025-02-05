@@ -1,6 +1,6 @@
 .quote {
   @include blockWrapper;
-  margin-top: -38rem;
+
   background-color: #f0f2f5;
   background-image: url("../images/quote-bg.svg");
   background-repeat: no-repeat;
@@ -8,11 +8,18 @@
   background-size: 93.4rem auto;
   margin-bottom: 12rem;
 
+  .realised-projects + & {
+    margin-top: -38rem;
+  }
+
   @include breakpoint(mobile) {
     margin-bottom: 7.2rem;
     background-size: 90% auto;
-    margin-top: -25rem;
     background-image: url("../images/quote-bg-mobile.svg");
+
+    .realised-projects + & {
+      margin-top: -25rem;
+    }
   }
 }
 
@@ -20,16 +27,24 @@
   @include blockContent;
   display: flex;
   flex-direction: column;
-  padding-top: 35.5rem;
+
   align-items: center;
   gap: 4.8rem;
   text-align: center;
   padding-bottom: 7.8rem;
+  padding-top: 7.8rem;
+  .realised-projects + .quote & {
+    padding-top: 35.5rem;
+  }
 
   @include breakpoint(mobile) {
-    padding-top: 25rem;
+    padding-top: 4rem;
     padding-bottom: 14rem;
     gap: 3.2rem;
+
+    .realised-projects + .quote & {
+      padding-top: 25rem;
+    }
   }
 }
 

@@ -67,7 +67,7 @@
 .page-footer__nav-list-item {
   display: flex;
   flex-direction: column;
-  gap: 2.4rem;
+  gap: 2rem;
 
   @include breakpoint(mobile) {
     gap: 1.6rem;
@@ -98,7 +98,7 @@
 
   @media (hover: hover) and (pointer: fine) {
     &:hover {
-      color: var(--primary-color);
+      color: rgba(#212121, 0.3);
     }
   }
 
@@ -118,7 +118,7 @@
 
   @media (hover: hover) and (pointer: fine) {
     &:hover {
-      color: var(--primary-color);
+      color: rgba(#212121, 0.3);
     }
   }
 
