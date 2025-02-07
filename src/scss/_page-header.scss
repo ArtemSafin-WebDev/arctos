@@ -4,7 +4,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 50;
+  z-index: 1200;
   width: 100%;
 
   @include breakpointMF(small-tablet) {
@@ -337,7 +337,7 @@
 
     .menu-open & {
       opacity: 1;
-      visibility: inherit;
+      visibility: visible;
       transition: opacity 0.4s, visibility 0.4s;
     }
 
@@ -422,6 +422,12 @@
     height: 0.5rem;
     fill: var(--primary-color);
     transition: fill 0.2s, transform 0.2s;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      color: rgba(#061930, 0.3);
+    }
   }
 
   @include breakpointMF(small-tablet) {
@@ -931,5 +937,30 @@
     -webkit-overflow-scrolling: none;
     overflow: hidden;
     overscroll-behavior: none;
+  }
+}
+
+.page-header__submenu-back {
+  display: none;
+
+  @include breakpoint(mobile) {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 3.2rem;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    font-family: var(--tektur);
+    color: #c2c2c2;
+    text-align: left;
+
+    svg {
+      width: 0.8rem;
+      height: 1.6rem;
+      flex-shrink: 0;
+      fill: var(--primary-color);
+    }
   }
 }

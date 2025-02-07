@@ -1,0 +1,80 @@
+<form action="/" method="POST" enctype="multipart/form-data" class="callback-form js-form">
+    <h2 class="h2 callback-form__heading">
+        Оставьте заявку!
+    </h2>
+    <div class="callback-form__row">
+
+
+        <div class="callback-form__fields">
+            <div class="callback-form__field">
+                <div class="callback-form__input-wrapper">
+                    <input type="text" class="callback-form__input" placeholder="Имя*" required="" name="your-name">
+                </div>
+            </div>
+            <div class="callback-form__field">
+                <div class="callback-form__input-wrapper">
+                    <input type="tel" class="callback-form__input" placeholder="Телефон*" required="" name="your-phone">
+                </div>
+            </div>
+            <div class="callback-form__field">
+                <div class="callback-form__select js-select" data-placeholder="Способ связи">
+                    <button class="callback-form__select-btn" type="button">
+                        <span class="callback-form__select-btn-text js-btn-text">
+                            Способ связи
+                        </span>
+                        <svg width="14" height="14" aria-hidden="true">
+                            <use xlink:href="#select-arrow"></use>
+                        </svg>
+                    </button>
+                    <div class="callback-form__select-dropdown">
+                        <div class="callback-form__select-dropdown-inner">
+                            <ul class="callback-form__select-list">
+                                <li class="callback-form__select-list-item">
+                                    <label class="callback-form__select-choice">
+                                        <input type="radio" class="callback-form__select-choice-input"
+                                            name="communication" value="Телефон">
+                                        <span class="callback-form__select-choice-content">
+                                            Телефон
+                                        </span>
+                                    </label>
+                                </li>
+                                <li class="callback-form__select-list-item">
+                                    <label class="callback-form__select-choice">
+                                        <input type="radio" class="callback-form__select-choice-input"
+                                            name="communication" value="Telegram">
+                                        <span class="callback-form__select-choice-content">
+                                            Telegram
+                                        </span>
+                                    </label>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="callback-form__field">
+                <div class="callback-form__input-wrapper">
+                    <textarea class="callback-form__input" name="your-comment" placeholder="Текст сообщения"></textarea>
+                </div>
+            </div>
+        </div>
+        <label class="callback-form__file js-file-upload">
+            <input type="file" class="callback-form__file-input">
+            <span class="callback-form__file-content">
+                <svg width="14" height="14" aria-hidden="true">
+                    <use xlink:href="#file"></use>
+                </svg>
+                <span class="callback-form__file-name js-file-upload-text">
+                    Прикрепить файл
+                </span>
+            </span>
+        </label>
+        <button class="btn callback-form__submit">
+            отправить
+        </button>
+        <div class="callback-form__policy">
+            Я согласен (-на) с политикой конфиденциальности
+        </div>
+    </div>
+</form>

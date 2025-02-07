@@ -1,0 +1,26 @@
+.seo-block {
+  @include blockWrapper;
+  margin-bottom: 12rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 7.2rem;
+  }
+}
+
+.seo-block__content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+}
+
+.seo-block__heading {
+  margin-bottom: 2.4rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 1.6rem;
+  }
+}
+
+.seo-block__text-content {
+  max-width: 85rem;
+}

@@ -1,0 +1,46 @@
+.contact-us {
+  @include blockWrapper;
+  position: relative;
+  z-index: 1;
+  padding: 12rem 0;
+
+  @include breakpoint(mobile) {
+    padding: 2.4rem 0;
+  }
+}
+
+.contact-us__content {
+  @include blockContent;
+}
+
+.contact-us__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    background-color: rgba(#1b4677, 0.4);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background-color: #1b4677;
+    mix-blend-mode: color;
+  }
+}
+
+.contact-us__bg-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

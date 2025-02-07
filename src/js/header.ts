@@ -4,6 +4,15 @@ export default function header() {
   const header = document.querySelector<HTMLElement>(".page-header");
   if (!header) return;
 
+  const burger = document.querySelector<HTMLButtonElement>(
+    ".page-header__burger"
+  );
+
+  burger?.addEventListener("click", (event) => {
+    event.preventDefault();
+    document.body.classList.toggle("menu-open");
+  });
+
   const checkHeader = () => {
     if (window.scrollY > 20) {
       header.classList.add("page-header--fixed");
@@ -41,9 +50,21 @@ export default function header() {
       ".page-header__submenu-second-level-link"
     )
   );
+  const submenuBackBtns = Array.from(
+    header.querySelectorAll<HTMLButtonElement>(".page-header__submenu-back")
+  );
 
   const thirdLevelSubmenues = Array.from(
     header.querySelectorAll<HTMLElement>(".page-header__third-level-submenu")
+  );
+
+  submenuBackBtns.forEach((btn) =>
+    btn.addEventListener("click", (event) => {
+      event.preventDefault();
+      btn
+        .closest(".page-header__nav-list-item")
+        ?.classList.remove("submenu-open");
+    })
   );
 
   secondLevelLinks.forEach((link) => {
@@ -91,14 +112,5 @@ export default function header() {
         link.parentElement?.classList.toggle("submenu-open");
       }
     });
-  });
-
-  const burger = document.querySelector<HTMLButtonElement>(
-    ".page-header__burger"
-  );
-
-  burger?.addEventListener("click", (event) => {
-    event.preventDefault();
-    document.body.classList.toggle("menu-open");
   });
 }

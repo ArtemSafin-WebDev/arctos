@@ -10,11 +10,18 @@ import pathSlider from "./pathSlider";
 import tabs from "./tabs";
 import reviews from "./reviews";
 import header from "./header";
+import fileUpload from "./fileUpload";
+import selects from "./selects";
+import components from "./components";
+import modals from "./modals";
+import forms from "./forms";
 
 document.addEventListener("DOMContentLoaded", () => {
   header();
   tabs();
+  modals();
   accordions();
+  fileUpload();
   ourClients();
   realisedProjects();
   ourTeam();
@@ -22,6 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
   fancybox();
   pathSlider();
   reviews();
+  selects();
+  components();
+  forms();
 });
 
 window.addEventListener("load", () => {

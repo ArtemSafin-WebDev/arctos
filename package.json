@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "@fancyapps/ui": "^5.0.36",
+    "axios": "^1.7.9",
     "gsap": "^3.12.7",
     "inputmask": "^5.0.8",
     "lodash": "^4.17.21",

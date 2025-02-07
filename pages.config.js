@@ -1,4 +1,5 @@
 import about from "./pages-data/about";
+import contacts from "./pages-data/contacts";
 import home from "./pages-data/home";
 import notFound from "./pages-data/notFound";
 import projects from "./pages-data/projects";
@@ -8,6 +9,7 @@ import singleTeam from "./pages-data/singleTeam";
 import subservice from "./pages-data/subservice";
 import subservice2 from "./pages-data/subservice-2";
 import team from "./pages-data/team";
+import certificates from "./pages-data/certificates";
 
 const pagesConfig = {
   ...home,
@@ -20,6 +22,8 @@ const pagesConfig = {
   ...team,
   ...subservice,
   ...subservice2,
+  ...contacts,
+  ...certificates,
 };
 
 export default pagesConfig;

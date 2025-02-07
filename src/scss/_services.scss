@@ -66,6 +66,8 @@
     border: 1px solid var(--primary-color);
     margin-left: -1px;
     margin-top: -1px;
+    position: relative;
+    z-index: 1;
     &--high {
       grid-row: span 2;
     }

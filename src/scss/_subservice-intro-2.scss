@@ -1,0 +1,80 @@
+.subservice-intro-2 {
+  @include blockWrapper;
+  margin-bottom: 12rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 7.2rem;
+  }
+}
+
+.subservice-intro-2__content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+  padding-top: 4rem;
+
+  @include breakpoint(mobile) {
+    padding-top: 1.2rem;
+  }
+}
+
+.subservice-intro-2__breadcrumbs {
+  margin-bottom: 5.6rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 3.2rem;
+  }
+}
+
+.subservice-intro-2__row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 0.8rem;
+  align-items: flex-start;
+
+  @include breakpoint(mobile) {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    align-items: stretch;
+  }
+}
+
+.subservice-intro-2__heading {
+  text-wrap: balance;
+}
+
+.subservice-intro-2__text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+
+  @include breakpoint(mobile) {
+    display: contents;
+  }
+}
+
+.subservice-intro-2__text {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  max-width: 51rem;
+  color: var(--text-color-2);
+
+  @include breakpoint(mobile) {
+    max-width: none;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  }
+}
+
+.subservice-intro-2__btn {
+  align-self: flex-start;
+  @include breakpoint(mobile) {
+    margin-top: 2.4rem;
+    align-self: stretch;
+  }
+}

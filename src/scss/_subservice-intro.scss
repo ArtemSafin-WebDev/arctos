@@ -16,10 +16,12 @@
   flex-direction: column;
   padding-top: 4rem;
   padding-bottom: 9rem;
+  min-height: 55rem;
 
   @include breakpoint(mobile) {
     padding-top: 3.2rem;
     padding-bottom: 5.6rem;
+    min-height: auto;
   }
 }
 

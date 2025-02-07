@@ -29,6 +29,10 @@
     box-sizing: border-box;
     width: 37.5rem;
 
+    @include breakpoint(mobile) {
+      width: 30rem;
+    }
+
     &:nth-child(odd) {
       .components__slider-card {
         background-color: #f0f2f5;
@@ -70,6 +74,10 @@
   gap: 1.6rem;
   border: 1px solid #c2c2c2;
   border-right: none;
+
+  @include breakpoint(mobile) {
+    padding: 2.4rem;
+  }
 }
 
 .components__slider-card-corners {
@@ -84,10 +92,81 @@
   font-weight: 400;
   line-height: 140%;
   color: var(--text-color-2);
+  margin-bottom: 1rem;
+
+  @include breakpoint(mobile) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
   p {
     margin-bottom: 2rem;
     &:last-child {
       margin-bottom: 0;
     }
   }
+}
+
+.components__slider-controls {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-gap: 0.8rem;
+  align-items: center;
+
+  @include breakpoint(mobile) {
+    margin-top: 3.2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: space-between;
+  }
+}
+
+.components__slider-arrows {
+  grid-column: 1 / 6;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  justify-self: flex-start;
+
+  @include breakpoint(mobile) {
+    gap: 0.8rem;
+  }
+}
+
+.components__slider-pagination {
+  grid-column: 6 / 7;
+  justify-self: flex-end;
+
+  @include breakpointMF(small-tablet) {
+    display: none;
+  }
+
+  @include breakpoint(mobile) {
+    order: -1;
+  }
+}
+
+.components__slider-card-image-wrapper {
+  position: relative;
+  margin-top: auto;
+  &::before {
+    content: "";
+    display: block;
+    padding-bottom: 60%;
+  }
+}
+
+.components__slider-card-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

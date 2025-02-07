@@ -1,0 +1,37 @@
+.block-for-text {
+  @include blockWrapper;
+  margin-bottom: 12rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 7.2rem;
+  }
+}
+
+.block-for-text__content {
+  @include blockContent;
+}
+
+.block-for-text__heading {
+  margin-bottom: 3.2rem;
+}
+
+.block-for-text__wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-gap: 0.8rem;
+  @include breakpoint(mobile) {
+    display: block;
+  }
+}
+
+.block-for-text__inner {
+  grid-column: 1 / 10;
+}
+
+.block-for-text__heading {
+  margin-bottom: 3.2rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 3rem;
+  }
+}
