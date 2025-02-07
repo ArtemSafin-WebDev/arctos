@@ -96,9 +96,11 @@
     color: var(--text-color-2);
   }
 
-  @media (hover: hover) and (pointer: fine) {
-    &:hover {
-      color: rgba(#212121, 0.3);
+  &:link {
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        color: rgba(#212121, 0.3);
+      }
     }
   }
 

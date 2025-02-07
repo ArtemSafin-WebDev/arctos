@@ -76,7 +76,7 @@
       grid-column: span 3;
 
       .services__card {
-        min-height: auto;
+        min-height: 24.6rem;
         grid-template-columns: repeat(9, minmax(0, 1fr));
       }
     }

@@ -186,22 +186,22 @@
     font-style: normal;
     font-weight: 600;
   }
-  sup,
-  span {
+}
+
+.since__card-amount-words {
+  font-size: 3.2857rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 0.2em;
+  margin-left: -0.3em;
+
+  @include breakpoint(mobile) {
     font-size: 3.2857rem;
     font-style: normal;
     font-weight: 600;
-    line-height: 100%;
-    display: inline-block;
-    vertical-align: top;
-    margin-top: 0.2em;
-    margin-left: -0.3em;
-
-    @include breakpoint(mobile) {
-      font-size: 3.2857rem;
-      font-style: normal;
-      font-weight: 600;
-    }
   }
 }
 
