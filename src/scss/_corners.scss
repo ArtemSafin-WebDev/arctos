@@ -12,13 +12,14 @@
     height: var(--corner-height, 4.5rem);
     top: 0;
     left: 0;
-    transform-origin: left top;
+    transform-origin: right top;
     position: absolute;
   }
 
   &::after {
     rotate: -90deg;
-    top: var(--corner-width, 1px);
+
+    margin-left: calc(-1 * var(--corner-width, 1px) / 2);
   }
 }
 .top-right-corner {
@@ -35,13 +36,13 @@
     height: var(--corner-height, 4.5rem);
     top: 0;
     right: 0;
-    transform-origin: right top;
+    transform-origin: left top;
     position: absolute;
   }
 
   &::after {
     rotate: 90deg;
-    top: var(--corner-width, 1px);
+    margin-right: calc(-1 * var(--corner-width, 1px) / 2);
   }
 }
 
@@ -59,13 +60,14 @@
     height: var(--corner-height, 4.5rem);
     bottom: 0;
     left: 0;
-    transform-origin: left bottom;
+    transform-origin: right bottom;
     position: absolute;
   }
 
   &::after {
     rotate: 90deg;
-    bottom: var(--corner-width, 1px);
+
+    margin-left: calc(-1 * var(--corner-width, 1px) / 2);
   }
 }
 
@@ -83,12 +85,13 @@
     height: var(--corner-height, 4.5rem);
     bottom: 0;
     right: 0;
-    transform-origin: right bottom;
+    transform-origin: left bottom;
     position: absolute;
   }
 
   &::after {
     rotate: -90deg;
-    bottom: var(--corner-width, 1px);
+
+    margin-right: calc(-1 * var(--corner-width, 1px) / 2);
   }
 }

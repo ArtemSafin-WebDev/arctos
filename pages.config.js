@@ -10,6 +10,7 @@ import subservice from "./pages-data/subservice";
 import subservice2 from "./pages-data/subservice-2";
 import team from "./pages-data/team";
 import certificates from "./pages-data/certificates";
+import search from "./pages-data/search";
 
 const pagesConfig = {
   ...home,
@@ -24,6 +25,7 @@ const pagesConfig = {
   ...subservice2,
   ...contacts,
   ...certificates,
+  ...search,
 };
 
 export default pagesConfig;

@@ -4,7 +4,7 @@
   flex-grow: 1;
   background-color: #f4f4f4;
   transition: color 0.2s, background-color 0.2s;
-  --corner-width: 1.5px;
+  --corner-width: 2px;
   @media (hover: hover) and (pointer: fine) {
     &:hover {
       background-color: #f0f2f5;

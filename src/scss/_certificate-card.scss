@@ -4,6 +4,7 @@
   grid-template-areas: "stack";
   flex-grow: 1;
   transition: color 0.2s, background-color 0.2s;
+  background-color: #fcfcfc;
   &::before {
     content: "";
     display: block;

@@ -9,7 +9,7 @@
   border: 1px solid var(--primary-color);
   color: #fefefe;
   background-color: var(--primary-color);
-  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s, opacity 0.2s;
   justify-content: center;
   text-align: center;
   &:link,
@@ -27,5 +27,10 @@
   &:active {
     color: var(--primary-color);
     background-color: #fefefe;
+  }
+
+  &[disabled] {
+    pointer-events: none;
+    opacity: 0.5;
   }
 }

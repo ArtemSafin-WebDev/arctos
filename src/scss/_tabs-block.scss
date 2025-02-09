@@ -1,0 +1,247 @@
+.tabs-block {
+  @include blockWrapper;
+  margin-bottom: 12rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 7.2rem;
+  }
+}
+
+.tabs-block__content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+}
+
+.tabs-block__heading {
+  text-wrap: balance;
+  margin-bottom: 3.2rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 2.4rem;
+  }
+}
+
+.tabs-block__row {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  border: 1px solid #f0f2f5;
+  background: #fff;
+
+  @include breakpoint(mobile) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.tabs-block__left-col {
+  grid-column: 1 / 4;
+  display: flex;
+  flex-direction: column;
+
+  @include breakpointMF(small-tablet) {
+    border-right: 1px solid #f0f2f5;
+  }
+
+  @include breakpoint(mobile) {
+    border-bottom: 1px solid #f0f2f5;
+  }
+}
+
+.tabs-block__right-col {
+  grid-column: 4 / -1;
+  display: flex;
+  flex-direction: column;
+}
+
+.tabs-block__nav-card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.8rem;
+  color: var(--text-color-2);
+  width: 100%;
+  text-align: left;
+  padding: 3.2rem;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+
+  @include breakpointMF(small-tablet) {
+    border-bottom: 1px solid #f0f2f5;
+    &:last-child {
+      border: none;
+    }
+  }
+
+  @include breakpoint(mobile) {
+    padding: 2.4rem;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    gap: 1rem;
+    border-bottom: none;
+    border-top: 1px solid #f0f2f5;
+    &:first-child {
+      border: none;
+    }
+  }
+
+  svg {
+    flex-shrink: 0;
+    margin-left: auto;
+    width: 1.6rem;
+    height: 1.6rem;
+    fill: var(--primary-color);
+    opacity: 0;
+    transition: opacity 0.2s, fill 0.2s, transform 0.2s;
+    align-self: flex-start;
+    margin-top: 0.6rem;
+
+    @include breakpoint(mobile) {
+      margin-top: 0.3rem;
+      transform: rotate(0deg);
+      fill: #c2c2c2;
+      opacity: 1;
+    }
+  }
+
+  &.active {
+    background-color: #f0f2f5;
+    border-color: #f0f2f5;
+    color: var(--primary-color);
+    font-family: var(--tektur);
+    font-weight: 600;
+
+    @include breakpoint(mobile) {
+      svg {
+        transform: rotate(90deg);
+        fill: var(--primary-color);
+      }
+    }
+
+    svg {
+      opacity: 1;
+    }
+  }
+}
+
+.tabs-block__right-wrapper {
+  @include breakpointMF(small-tablet) {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-image: url("../images/tabs-block-decor.svg");
+    background-repeat: no-repeat;
+    background-position: right -23rem bottom -15rem;
+    background-size: 100rem auto;
+    position: relative;
+  }
+}
+
+.tabs-block__tab {
+  @include breakpointMF(small-tablet) {
+    flex-grow: 1;
+    padding: 7.2rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s, visibility 0s linear 0.4s;
+    z-index: 5;
+    &.active {
+      opacity: 1;
+      visibility: inherit;
+      transition: opacity 0.4s, visibility 0.4s;
+      position: relative;
+      z-index: 10;
+    }
+  }
+
+  @include breakpoint(mobile) {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 500ms;
+
+    &.active {
+      grid-template-rows: 1fr;
+    }
+  }
+}
+
+.tabs-block__tab-inner {
+  @include breakpoint(mobile) {
+    overflow: hidden;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+  }
+}
+.tabs-block__tab-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 3rem;
+
+  @include breakpoint(mobile) {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.6rem;
+    padding: 2.4rem;
+  }
+}
+
+.tabs-block__tab-text-content {
+  max-width: 66rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+
+  @include breakpoint(mobile) {
+    gap: 0.8rem;
+  }
+}
+
+.tabs-block__tab-text {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  color: var(--text-color-2);
+
+  @include breakpoint(mobile) {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  }
+}
+
+.tabs-block__image-wrapper {
+  position: relative;
+  flex-shrink: 0;
+  width: 34rem;
+
+  @include breakpoint(mobile) {
+    width: 100%;
+  }
+  &::before {
+    content: "";
+    display: block;
+    padding-bottom: 68%;
+  }
+}
+
+.tabs-block__image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

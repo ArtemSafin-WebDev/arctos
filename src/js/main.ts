@@ -15,6 +15,7 @@ import selects from "./selects";
 import components from "./components";
 import modals from "./modals";
 import forms from "./forms";
+import tabsBlock from "./tabs-block";
 
 document.addEventListener("DOMContentLoaded", () => {
   header();
@@ -32,6 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
   selects();
   components();
   forms();
+  tabsBlock();
 });
 
 window.addEventListener("load", () => {

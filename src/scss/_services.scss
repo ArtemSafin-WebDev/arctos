@@ -49,7 +49,7 @@
 
   @include breakpointMF(small-tablet) {
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    clip-path: inset(1px 1px 1px -1px);
+    clip-path: inset(0.2rem 0.2rem 0.3rem -0.2rem);
   }
 
   @include breakpoint(mobile) {
@@ -63,9 +63,9 @@
   flex-direction: column;
 
   @include breakpointMF(small-tablet) {
-    border: 1px solid var(--primary-color);
-    margin-left: -1px;
-    margin-top: -1px;
+    border: 0.2rem solid var(--primary-color);
+    margin-left: -0.2rem;
+    margin-top: -0.2rem;
     position: relative;
     z-index: 1;
     &--high {

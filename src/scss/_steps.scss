@@ -35,7 +35,7 @@
 
 .steps__list {
   display: contents;
-  --corner-width: 1.5px;
+  --corner-width: 0.2rem;
   @include breakpoint(mobile) {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
