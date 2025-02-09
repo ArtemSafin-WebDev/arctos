@@ -227,3 +227,8 @@ select:-webkit-autofill:focus {
   overflow-x: clip;
   padding-top: var(--header-height);
 }
+
+mark {
+  background-color: transparent;
+  color: var(--primary-color);
+}

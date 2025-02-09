@@ -145,3 +145,19 @@
     display: none;
   }
 }
+
+.advantages__cerfificates-list {
+  position: relative;
+}
+
+@media (min-width: 641px) {
+  .advantages__cerfificates-list::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 1px solid #c2c2c2;
+    pointer-events: none;
+    top: -1px;
+    left: -1px;
+  }
+}

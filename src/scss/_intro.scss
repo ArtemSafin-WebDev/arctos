@@ -128,3 +128,13 @@
   height: 100%;
   object-fit: cover;
 }
+
+.intro:not(:has(~ .services)) {
+  margin-bottom: 12rem;
+}
+
+@media (max-width: 640px) {
+  .intro:not(:has(~ .services)) {
+    margin-bottom: 7.2rem;
+  }
+}
