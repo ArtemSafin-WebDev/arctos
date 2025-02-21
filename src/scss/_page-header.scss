@@ -169,6 +169,14 @@
   @include breakpoint(mobile) {
     justify-content: space-between;
     gap: 2rem;
+    flex-wrap: wrap;
+  }
+}
+.page-header__contacts-list-item {
+  @include breakpoint(mobile) {
+    flex-basis: calc(50% - 2rem / 2);
+    flex-shrink: 0;
+    flex-grow: 1;
   }
 }
 
@@ -179,12 +187,14 @@
 
   @include breakpoint(mobile) {
     gap: 0.4rem;
+    white-space: nowrap;
   }
 
   svg {
     fill: var(--primary-color);
     width: 1.6rem;
     height: 1.6rem;
+    margin-top: 0.25rem;
   }
 
   @media (hover: hover) and (pointer: fine) {

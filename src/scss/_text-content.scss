@@ -236,7 +236,7 @@
         color: var(--primary-color);
 
         @include breakpoint(mobile) {
-          top: -0.1em;
+          top: 0.4rem;
         }
       }
     }
