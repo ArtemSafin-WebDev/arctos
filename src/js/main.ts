@@ -16,6 +16,7 @@ import components from "./components";
 import modals from "./modals";
 import forms from "./forms";
 import tabsBlock from "./tabs-block";
+import since from "./since";
 
 document.addEventListener("DOMContentLoaded", () => {
   header();
@@ -34,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
   components();
   forms();
   tabsBlock();
+  since();
 });
 
 window.addEventListener("load", () => {
