@@ -18,6 +18,13 @@
     color: #c2c2c2;
   }
 
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      color: var(--primary-color);
+      border-color: var(--primary-color);
+    }
+  }
+
   &.active {
     cursor: default;
     color: var(--primary-color);

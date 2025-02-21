@@ -24,6 +24,14 @@
   }
 
   @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      .project-card__preview-wrapper {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+      }
+    }
   }
 }
 
@@ -53,11 +61,10 @@
   flex-direction: column;
   gap: 4rem;
   padding: 4.8rem;
-  padding-top: 1.6rem;
 
   @include breakpoint(mobile) {
     padding: 2.4rem;
-    padding-top: 1.6rem;
+
     gap: 1.6rem;
   }
 
@@ -79,10 +86,11 @@
   gap: 2rem;
   justify-content: space-between;
   margin-bottom: auto;
-  min-height: 10.4rem;
+
+  padding-right: 19rem;
 
   @include breakpoint(mobile) {
-    min-height: 4.3rem;
+    padding-right: 7.8rem;
   }
 }
 
@@ -139,15 +147,20 @@
 
 .project-card__preview-wrapper {
   flex-shrink: 0;
-  position: relative;
+  position: absolute;
+  right: 1.6rem;
+  top: 1.6rem;
   overflow: clip;
   width: 19rem;
-  transition: opacity 0.4s;
+  transition: opacity 0.4s, transform 0.4s, width 0.4s, height 0.4s, top 0.4s,
+    right 0.4s;
   height: 10.4rem;
 
   @include breakpoint(mobile) {
     width: 7.8rem;
     height: 4.3rem;
+    right: 0.6rem;
+    top: 0.6rem;
   }
 
   &::after {

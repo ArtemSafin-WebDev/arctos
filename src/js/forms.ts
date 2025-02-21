@@ -1,6 +1,31 @@
 import Validator from "./classes/Validator";
 import axios from "axios";
 
+/**
+ * Initializes form validation and submission handling for all forms with the class "js-form".
+ *
+ * This function:
+ * - Selects all forms with the class "js-form".
+ * - Initializes a Validator instance for each form.
+ * - Sets up an AbortController for managing request cancellation.
+ * - Disables the submit button during form submission.
+ * - Validates the form on submission.
+ * - Sends the form data using an Axios POST request if the form is valid.
+ * - Handles the response, showing a success modal if the form submission is successful.
+ * - Resets the form and re-enables the submit button after submission.
+ *
+ * @remarks
+ * The function assumes that the `Validator` class and `axios` library are available in the scope.
+ *
+ * @example
+ * ```typescript
+ * import forms from './forms';
+ *
+ * document.addEventListener('DOMContentLoaded', () => {
+ *   forms();
+ * });
+ * ```
+ */
 export default function forms() {
   const forms = Array.from<HTMLFormElement>(
     document.querySelectorAll(".js-form")

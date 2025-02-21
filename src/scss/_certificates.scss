@@ -139,3 +139,13 @@
     max-width: none;
   }
 }
+
+.certificates__results-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 6.4rem;
+
+  @include breakpoint(mobile) {
+    gap: 4rem;
+  }
+}
