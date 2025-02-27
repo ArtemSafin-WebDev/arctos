@@ -17,6 +17,7 @@ import modals from "./modals";
 import forms from "./forms";
 import tabsBlock from "./tabs-block";
 import since from "./since";
+import scrollUp from "./scrollUp";
 
 document.addEventListener("DOMContentLoaded", () => {
   header();
@@ -36,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
   forms();
   tabsBlock();
   since();
+  scrollUp();
 });
 
 window.addEventListener("load", () => {

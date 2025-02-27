@@ -953,15 +953,6 @@
   }
 }
 
-@include breakpointMF(small-tablet) {
-  body:has(.page-header__nav-list-item:hover .page-header__submenu) {
-    touch-action: none;
-    -webkit-overflow-scrolling: none;
-    overflow: hidden;
-    overscroll-behavior: none;
-  }
-}
-
 .page-header__submenu-back {
   display: none;
 

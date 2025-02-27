@@ -1,0 +1,59 @@
+.scroll-up {
+  @include blockWrapper;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  bottom: 3rem;
+  width: 100%;
+  z-index: 20;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0s linear 0.2s;
+
+  @include breakpoint(mobile) {
+    bottom: 1rem;
+  }
+
+  &.shown {
+    opacity: 1;
+    visibility: inherit;
+    transition: opacity 0.2s, visibility 0.2s;
+  }
+}
+
+.scroll-up__inner {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+}
+
+.scroll-up__btn {
+  margin-left: auto;
+  pointer-events: all;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background-color: rgba(6, 25, 48, 1);
+  transition: background-color 0.2s;
+
+  @include breakpoint(mobile) {
+    width: 5rem;
+    height: 5rem;
+  }
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: white;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: var(--primary-color);
+    }
+  }
+
+  &:active {
+    background-color: var(--primary-color);
+  }
+}
